@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+  
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   
+    <title>My React</title>
+  </head>
+  <body id="body">
+    <div id="root"></div>
+    <aside>
+      <label>Enter Num1:</label><input type="number" id="num1"><br><br>
+      <label>Enter Num2:</label><input type="number" id="num2"><br><br>
+      <button onclick="addUp();" id="ser">Plus</button>
+      <button onclick="minus();" id="ser">Minus</button><br><br>
+      <button onclick="divide();" id="ser">Divide</button>
+      <button onclick="multiplication();" id="ser">Multiply</button>
+    </aside>
+  <h1 id="results1">....</h1>
+    <script type="text/javascript">
+    const color = document.getElementById('body')
+			const addUp = () =>{
+				let a = document.querySelector('#num1').value;
+        let b = document.querySelector('#num2').value;
+        color.style.color = 'red';
+        color.style.fontFamily = '-apple-system';
+        color.style.fontSize = '30px';
+        color.style.backgroundColor = 'gray';
+
+
+				document.getElementById("results1").innerHTML = Number(a) + Number(b);
+			}
+				const minus = () =>{
+				let a = document.querySelector('#num1').value;
+				let b = document.querySelector('#num2').value;
+
+        document.getElementById("results1").innerHTML = Number(a) - Number(b);
+        color.style.color = 'white';
+        color.style.fontFamily = 'harrington';
+        color.style.fontSize = '30px';
+        color.style.backgroundColor = 'black';
+			}
+			const divide = () =>{
+				let a = document.querySelector('#num1').value;
+				let b = document.querySelector('#num2').value;
+
+        document.getElementById("results1").innerHTML = Number(a) / Number(b);
+        color.style.color = 'purple';
+        color.style.fontFamily = 'sans-serif';
+        color.style.fontSize = '30px';
+        color.style.backgroundColor = 'yellow';
+      }
+      const multiplication = () =>{
+				let a = document.querySelector('#num1').value;
+				let b = document.querySelector('#num2').value;
+				document.getElementById("results1").innerHTML = Number(a) * Number(b);
+        color.style.color = 'gray';
+        color.style.fontFamily = 'arial';
+        color.style.fontSize = '30px';
+        color.style.backgroundColor = 'red';
+      }
+			</script>
+
+      <div></div>
+  </body>
+</html>
